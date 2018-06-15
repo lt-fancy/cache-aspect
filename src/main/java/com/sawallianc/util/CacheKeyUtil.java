@@ -8,7 +8,7 @@ public final class CacheKeyUtil {
     }
 
     public static String generateKey(String prefix, Class<?> target, Method method,Object[] params){
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         if(null!=params&&params.length>0){
             Object[] objs = params;
             int length = objs.length;
@@ -17,6 +17,6 @@ public final class CacheKeyUtil {
                 sb.append(object).append(":");
             }
         }
-        return new StringBuilder(prefix).append(":").append(target.getSimpleName()).append(":").append(method.getName()).append(":").append(params).toString();
+        return new StringBuffer(prefix).append(":").append(target.getSimpleName()).append(":").append(method.getName()).append(":").append(sb).toString();
     }
 }
