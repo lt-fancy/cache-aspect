@@ -17,6 +17,6 @@ public final class CacheKeyUtil {
                 sb.append(object).append(":");
             }
         }
-        return new StringBuilder(prefix).append(":").append(target.getSimpleName()).append(":").append(method.getName()).append(":").append(params).toString();
+        return new StringBuilder(prefix).append(":").append(target.getSimpleName()).append(":").append(method.getName()).append(":").append(sb).toString();
     }
 }
